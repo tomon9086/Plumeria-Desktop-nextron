@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
+  "name": "plumeria-desktop",
+  "description": "The best way to virtualize yourself.",
   "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "author": "nino <tomon9086@gmail.com>",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
