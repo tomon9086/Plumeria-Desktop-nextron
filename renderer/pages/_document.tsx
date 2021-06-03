@@ -1,18 +1,18 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/styles';
-import { theme } from '../lib/theme';
+import { Children } from 'react'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { ServerStyleSheets } from '@material-ui/styles'
+import { theme } from '../lib/theme'
 
 export default class MyDocument extends Document {
-  render() {
+  render () {
     return (
-      <Html lang="en" dir="ltr">
+      <Html dir='ltr' lang='en'>
         <Head>
-          <meta charSet="utf-8" />
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta charSet='utf-8' />
+          <meta content={theme.palette.primary.main} name='theme-color' />
           <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+            rel='stylesheet'
           />
         </Head>
         <body>
@@ -20,26 +20,26 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-MyDocument.getInitialProps = async ctx => {
-  const sheets = new ServerStyleSheets();
-  const originalRenderPage = ctx.renderPage;
+MyDocument.getInitialProps = async (ctx) => {
+  const sheets = new ServerStyleSheets()
+  const originalRenderPage = ctx.renderPage
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-    });
+      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />)
+    })
 
-  const initialProps = await Document.getInitialProps(ctx);
+  const initialProps = await Document.getInitialProps(ctx)
 
   return {
     ...initialProps,
     styles: [
-      ...React.Children.toArray(initialProps.styles),
-      sheets.getStyleElement(),
-    ],
-  };
-};
+      ...Children.toArray(initialProps.styles),
+      sheets.getStyleElement()
+    ]
+  }
+}
