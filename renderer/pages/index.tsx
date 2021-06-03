@@ -46,6 +46,9 @@ const Home = () => {
         <Typography gutterBottom>
           <Link href='/next'>Go to the next page</Link>
         </Typography>
+        <Typography gutterBottom>
+          <Link href='/three'>three.js test page</Link>
+        </Typography>
         <Button color='secondary' onClick={handleClick} variant='contained'>
           Super Secret Password
         </Button>
