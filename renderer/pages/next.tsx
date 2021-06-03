@@ -2,8 +2,7 @@ import { } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import { Button, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

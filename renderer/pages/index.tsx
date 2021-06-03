@@ -1,14 +1,8 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@material-ui/core'
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import Dialog from '@material-ui/core/Dialog'
-import DialogTitle from '@material-ui/core/DialogTitle'
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogActions from '@material-ui/core/DialogActions'
-import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
