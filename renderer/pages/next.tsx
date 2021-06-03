@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-function Next () {
+const Next = () => {
   const classes = useStyles({})
 
   return (
@@ -38,6 +38,6 @@ function Next () {
       </div>
     </>
   )
-};
+}
 
 export default Next

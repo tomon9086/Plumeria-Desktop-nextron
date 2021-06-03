@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-function Home () {
+const Home = () => {
   const classes = useStyles({})
   const [open, setOpen] = useState(false)
   const handleClose = () => setOpen(false)
@@ -58,6 +58,6 @@ function Home () {
       </div>
     </>
   )
-};
+}
 
 export default Home
