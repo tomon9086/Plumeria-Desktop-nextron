@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -8,7 +9,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
-import Link from '../components/Link';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
